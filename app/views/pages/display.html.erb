@@ -1,0 +1,6 @@
+<h1><%= @title %></h1>
+
+<% @posts.each do |post| %>
+    <h3><%= post.category %></h3>
+    <p>- <%= post.item %><p>
+<% end %> 
