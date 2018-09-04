@@ -2,26 +2,26 @@ $default-color: black;
 $border-style: solid 1px $default-color;
 $main-color: #004F99;
 
-body {font-family: helvetica;}
+body {font-family: helvetica; }
 
-h1 {font-size: 3rem;}
+h1 {font-size: 3rem; }
 
 a { &:link { 
         font-size: 2rem;
         color: $main-color;
         text-decoration: none;
-        padding-left: 45px;}
-    &:visited, &:active {color: $main-color;}
-    &:hover {color: $default-color;}    
+        padding-left: 42px;}
+    &:visited, &:active {color: $main-color; }
+    &:hover {color: $default-color; }    
 }
 
 .container {
-    margin: 45px auto 0px auto;
+    margin: 80px auto 0px auto;
     width: 900px;
     height: auto;
 }
 
-.board {
+.note_wall {
     margin-top: 25px;
     border: solid 1px $default-color;
     width: 770px;
