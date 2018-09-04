@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
     def index
-        @title = 'Create A New Note'
+        @title = 'Post It Notes'
     end
 
     def show
@@ -16,10 +16,16 @@ class PostsController < ApplicationController
         redirect_to '/display'
     end
 
+    def destroy
+        @post = Post.destroy(params[:id])
+    end
+
     private
     
     def post_params
         params.require(:post).permit(:category, :item)
     end
+
+
 
 end

@@ -1,3 +1,69 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$default-color: black;
+$border-style: solid 1px $default-color;
+$main-color: #004F99;
+
+body {font-family: helvetica;}
+
+h1 {font-size: 3rem;}
+
+a { &:link { 
+        font-size: 2rem;
+        color: $main-color;
+        text-decoration: none;
+        padding-left: 45px;}
+    &:visited, &:active {color: $main-color;}
+    &:hover {color: $default-color;}    
+}
+
+.container {
+    margin: 45px auto 0px auto;
+    width: 900px;
+    height: auto;
+}
+
+.board {
+    margin-top: 25px;
+    border: solid 1px $default-color;
+    width: 770px;
+    height: auto;
+    padding: 50px;
+}
+
+.note_row {
+    display: flex;
+    &:last-child{margin-top:20px; }
+}
+
+.postnote {
+    border: $border-style;
+    width: 212px; 
+    height: 200px;
+    padding: 10px;
+    background-color: #FFFFCC;
+    &:nth-child(2) {
+        margin-left: 25px; 
+        margin-right: 25px; }
+    & > p {font-size: .9rem; }
+}
+
+%form-style {
+    width: 650px; 
+    font-size: 1.1rem;
+    border: $border-style;
+}
+
+input {
+    @extend %form-style;
+    height: 30px;
+    &[type=submit] {
+        background-color: $main-color;
+        color: #E0E0E0;
+        padding: 15px;
+        height: 50px;}
+}
+
+textarea {
+    @extend %form-style;
+    height: 30px;
+    resize: none;
+}
